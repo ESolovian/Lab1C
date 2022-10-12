@@ -88,7 +88,7 @@ int main(int argc, char** argv) {
 
             std::cout << filename << std::endl;
 
-            average_size_line = (size_file + 9) / lines;
+            average_size_line = size_file / lines;
             std::cout << average_size_line;
         }
 
