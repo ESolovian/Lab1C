@@ -8,9 +8,11 @@ int main(int argc, char** argv) {
     size_t count_lines; //инициализация количества строк
     size_t count_words; //инициализация количества слов
     size_t size_file; //инициализация размера файла в байтах
+    size_t average_size_line;
     bool lines = false; //параметры, которые вызывают соответствующие опции
     bool words = false;
     bool bytes = false;
+    bool average_bytes = false;
     bool all = false; //без опций
     bool flag = true;
     std::string filename;
@@ -85,6 +87,9 @@ int main(int argc, char** argv) {
             }
 
             std::cout << filename << std::endl;
+
+            average_size_line = (size_file + 9) / lines;
+            std::cout << average_size_line;
         }
 
         file.close();
